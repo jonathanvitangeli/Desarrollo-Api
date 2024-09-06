@@ -12,7 +12,7 @@ function App() {
     setLoading(true);
     setErrorMessage(null);  // Resetea el mensaje de error
     try {
-      const response = await axios.post('http://localhost:3000/random');
+      const response = await axios.post('http://localhost:3001/random');
       setRandomNumber(response.data.value);
     } catch (error) {
       console.error('Error fetching random number:', error);
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <h1>Random Number Generator</h1>
       
-      <div class="wrapper">
+      <div className="wrapper">
         <div className="container">
          
           {randomNumber !== null && (
